@@ -1,0 +1,40 @@
+.wrap {
+    background: $card;
+    border: 1px solid $border;
+    border-radius: $radius;
+    padding: 12px 14px;
+    box-shadow: $shadow;
+    display: grid;
+    gap: 10px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.label {
+    font-weight: 700;
+}
+
+.meta {
+    color: $muted;
+    font-size: 14px;
+}
+
+.track {
+    height: 10px;
+    background: $bg;
+    border: 1px solid $border;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: $primary;
+    border-radius: 999px;
+    transition: width $transition;
+}

@@ -1,0 +1,41 @@
+.block {
+    background: $card;
+    border: 1px solid $border;
+    border-radius: $radius;
+    padding: 14px;
+    box-shadow: $shadow;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.type {
+    color: $muted;
+    font-size: 13px;
+}
+
+.prompt {
+    margin-top: 10px;
+}
+
+.answer {
+    margin-top: 10px;
+    color: $muted;
+}
+
+.options {
+    margin-top: 10px;
+    display: grid;
+    gap: 8px;
+}
+
+.option {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: $muted;
+}

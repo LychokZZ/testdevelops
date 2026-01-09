@@ -1,0 +1,43 @@
+/* Colors */
+$bg: #f7f8fb; // background of pages
+$card: #ffffff; // cards, blocks
+$border: #e5e7eb; // borders
+$text: #111827; // main text
+$muted: #6b7280; // secondary text
+$primary: #2563eb; // primary action (buttons, links)
+$danger: #dc2626; // delete / error actions
+$success: #16a34a; // success states (optional)
+$warning: #f59e0b; // warning states (optional)
+
+/* Shadows */
+$shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+$shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+
+/* Radius */
+$radius-sm: 8px;
+$radius: 14px;
+$radius-lg: 18px;
+
+/* Spacing */
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 24px;
+$space-6: 32px;
+
+/* Font sizes */
+$font-xs: 12px;
+$font-sm: 14px;
+$font-md: 16px;
+$font-lg: 18px;
+$font-xl: 22px;
+
+/* Z-index */
+$z-header: 10;
+$z-modal: 100;
+$z-tooltip: 200;
+
+/* Transitions */
+$transition-fast: 0.15s ease;
+$transition: 0.25s ease;

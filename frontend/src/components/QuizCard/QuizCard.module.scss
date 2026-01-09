@@ -1,0 +1,28 @@
+.card {
+    background: $card;
+    border: 1px solid $border;
+    border-radius: $radius;
+    padding: 14px;
+    box-shadow: $shadow;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.meta {
+    margin-top: 4px;
+    color: $muted;
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}

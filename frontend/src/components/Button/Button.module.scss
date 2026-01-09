@@ -1,0 +1,22 @@
+.btn {
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    background: transparent;
+}
+
+.primary {
+    background: $primary;
+    color: #fff;
+}
+
+.ghost {
+    border-color: $border;
+    background: #fff;
+}
+
+.danger {
+    background: $danger;
+    color: #fff;
+}

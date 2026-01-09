@@ -1,0 +1,171 @@
+@use "@/styles/variables.scss" as *;
+
+.page {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.shell {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    gap: 14px;
+    align-content: start;
+}
+
+.center {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: $card;
+    border: 1px solid $border;
+    border-radius: $radius;
+    box-shadow: $shadow;
+}
+
+.top {
+    display: grid;
+    gap: 12px;
+}
+
+.titleBlock {
+    display: grid;
+    gap: 4px;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: -0.2px;
+}
+
+.sub {
+    color: $muted;
+    font-size: 14px;
+}
+
+.card {
+    background: $card;
+    border: 1px solid $border;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    padding: 18px;
+    display: grid;
+    gap: 14px;
+}
+
+.qHeader {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.qTag {
+    font-size: 12px;
+    color: $muted;
+    border: 1px solid $border;
+    border-radius: 999px;
+    padding: 6px 10px;
+    background: #fff;
+}
+
+.prompt {
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.answer {
+    margin-top: 2px;
+}
+
+.booleanGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.choice,
+.choiceRow {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid $border;
+    border-radius: $radius;
+    padding: 12px 12px;
+    background: #fff;
+}
+
+.choice input,
+.choiceRow input {
+    width: 16px;
+    height: 16px;
+}
+
+.inputWrap {
+    display: grid;
+    gap: 8px;
+}
+
+.textInput {
+    width: 100%;
+    padding: 12px 12px;
+    border-radius: $radius;
+    border: 1px solid $border;
+    background: #fff;
+}
+
+.checkboxList {
+    display: grid;
+    gap: 10px;
+}
+
+.hint {
+    color: $muted;
+    font-size: 13px;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 12px;
+    align-items: center;
+    position: sticky;
+    bottom: 10px;
+    padding: 12px;
+    background: rgba(247, 248, 251, 0.85);
+    border: 1px solid $border;
+    border-radius: $radius;
+    backdrop-filter: blur(8px);
+}
+
+.navMeta {
+    color: $muted;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 560px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .prompt {
+        font-size: 16px;
+    }
+
+    .booleanGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .navMeta {
+        order: -1;
+    }
+}

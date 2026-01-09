@@ -1,0 +1,26 @@
+.header {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.nav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.primary {
+    padding: 8px 14px;
+    background: $primary;
+    color: white;
+    border-radius: $radius;
+}
