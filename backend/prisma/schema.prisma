@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum QuestionType {
+  BOOLEAN
+  INPUT
+  CHECKBOX
+}
+
+model Quiz {
+  id        String     @id @default(cuid())
+  title     String
+  questions Question[]
+  createdAt DateTime   @default(now())
+}
+
+model Question {
+  id            String       @id @default(cuid())
+  quizId        String
+  quiz          Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
+
+  type          QuestionType
+  prompt        String
+  order         Int
+
+  // for BOOLEAN
+  correctBoolean Boolean?
+
+  // for INPUT
+  correctText   String?
+
+  // for CHECKBOX
+  options       Option[]
+
+  createdAt     DateTime     @default(now())
+
+  @@index([quizId])
+  @@unique([quizId, order])
+}
+
+model Option {
+  id         String   @id @default(cuid())
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  text       String
+  isCorrect  Boolean  @default(false)
+  order      Int
+
+  @@index([questionId])
+  @@unique([questionId, order])
+}
